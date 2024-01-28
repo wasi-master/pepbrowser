@@ -8,7 +8,7 @@ from .cli import get_args
 console = Console()
 
 def get_content(pep_number, ext):
-    url = f"https://raw.githubusercontent.com/python/peps/main/pep-{pep_number}.{ext}"
+    url = f"https://raw.githubusercontent.com/python/peps/main/peps/pep-{pep_number}.{ext}"
     with requests.get(url) as resp:
         if resp.status_code != 200:
             return None
