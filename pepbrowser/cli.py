@@ -1,12 +1,11 @@
 import argparse
 
 def pep_number(num):
-    if not all(n.isdigit() for n in num):
+    if len(num) > 4 or not num.isdigit():
         raise argparse.ArgumentError(f"Invalid pep number format: {num}")
 
-    if not len(num) == 4:
-        num = num.zfill(4)
-    return num
+    return num.zfill(4)
+
 
 def get_args():
     parser = argparse.ArgumentParser(prog="pepbrowser", description="Browse python enhancement proposals in your terminal")
