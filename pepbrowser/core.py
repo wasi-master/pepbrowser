@@ -23,4 +23,4 @@ def main():
             content = get_content(args.pep, ext="rst")
             if content is None:
                 print("No pep found with the specified number")
-    console.print(RST(content, code_theme=args.theme, show_errors=False))
+    console.print(RST(content, code_theme=args.theme, default_lexer="python", show_errors=False))
